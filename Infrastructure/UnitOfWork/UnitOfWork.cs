@@ -19,11 +19,8 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     private IEstadoRepository _estado;
     private IFormaPagoRepository _formaPago;
     private IGeneroRepository _genero;
-    private IInsumoPrendaRepository _insumoPrenda;
-    private IInsumoProveedorRepository _insumoProveedor;
     private IInsumoRepository _insumo;
     private IInventarioRepository _inventario;
-    private InventarioTallaRepository _inventarioTalla;
     private IMunicipioRepository _municipio;
     private IOrdenRepository _orden;
     private IPaisRepository _pais;
@@ -162,6 +159,14 @@ public class UnitOfWork : IUnitOfWork, IDisposable
                 _orden = new OrdenRepository(_context);
             }
             return _orden;
+        }
+    }
+    public IInsumoRepository Insumos {
+        get {
+            if (_insumo == null) {
+                _insumo = new InsumoRepository(_context);
+            }
+            return _insumo;
         }
     }
 

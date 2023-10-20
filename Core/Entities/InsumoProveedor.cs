@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class InsumoProveedor : BaseEntity
+    public class InsumoProveedor
     {
         public Insumo Insumo { get; set; }
         public int IdInsumoFk { get; set; }

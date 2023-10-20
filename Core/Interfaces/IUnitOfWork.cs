@@ -19,6 +19,7 @@ namespace Core.Interfaces
         IEstadoRepository Estados { get; }
         IFormaPagoRepository FormasPago { get; }
         IGeneroRepository Generos { get; }
+        IInsumoRepository Insumos { get; }
         IInventarioRepository Inventarios { get; }
         IMunicipioRepository Municipios { get; }
         IOrdenRepository Ordenes { get; }

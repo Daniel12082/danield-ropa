@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class InventarioTalla : BaseEntity
+    public class InventarioTalla
     {
         public Inventario Inventario { get; set; }
         public int IdInventarioFk { get; set; }
