@@ -1,0 +1,17 @@
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
+
+namespace Core.Entities
+{
+    public class Talla : BaseEntity
+    {
+        public string Descripcion { get; set; }
+        public ICollection<InventarioTalla> InventarioTallas { get; set; }
+        public ICollection<DetalleVenta> DetalleVentas { get; set; }
+    }
+}
