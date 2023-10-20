@@ -6,7 +6,7 @@ using Core.Entities;
 
 namespace Core.Interfaces
 {
-    public interface IInsumoRepository<T>
+    public interface IInsumoRepository : IGenericRepository<Insumo>
     {
         
     }

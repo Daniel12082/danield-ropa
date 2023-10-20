@@ -8,7 +8,6 @@ namespace Core.Interfaces
 {
     public interface IOrdenRepository : IGenericRepository<Orden>
     {
-        
     }
 }
 

@@ -6,15 +6,9 @@ using Core.Entities;
 
 namespace Core.Interfaces
 {
-    public interface IInsumoProveedorRepository<T>
+    public interface IInsumoProveedorRepository : IGenericRepository<InsumoProveedor>
     {
-        Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageindex, int pageSize);
-        IEnumerable<T> Find(Func<T, bool> predicate);
-        void Add(T entity);
-        void AddRange(IEnumerable<T> entities);
-        void Update(T entity);
-        void Delete(T entity);
-        void DeleteRange(IEnumerable<T> entities);
+        
     }
 }
 

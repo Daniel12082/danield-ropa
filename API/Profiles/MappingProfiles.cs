@@ -12,7 +12,7 @@ namespace API.Profiles
     {
         public MappingProfiles()
         {
-            CreateMap<Entidad, EntidadDto>();
+            CreateMap<Cargo, CargoDto>();
         }
     }
 }

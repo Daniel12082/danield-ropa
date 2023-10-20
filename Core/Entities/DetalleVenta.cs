@@ -9,7 +9,7 @@ namespace Core.Entities
 {
     public class DetalleVenta : BaseEntity
     {
-        public Venta venta { get; set; }
+        public Venta Venta { get; set; }
         public int IdVentaFk { get; set; }
         public Inventario Inventario { get; set; }
         public int IdProductoFk { get; set; }
