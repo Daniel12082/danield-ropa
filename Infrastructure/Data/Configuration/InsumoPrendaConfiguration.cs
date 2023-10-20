@@ -14,8 +14,7 @@ namespace Infrastructure.Data.Configuration
         public void Configure(EntityTypeBuilder<InsumoPrenda> builder)
         {
             builder.ToTable("InsumoPrenda");
-            builder.HasKey(t => new { t.Id, t.IdInsumoFk });
-            builder.HasKey(t => new { t.Id, t.IdPrendaFk });
+            builder.HasKey(t => new { t.IdPrendaFk, t.IdInsumoFk });
             builder.HasOne(x => x.Insumo).WithMany(x => x.InsumoPrendas).HasForeignKey(x => x.IdInsumoFk);
             builder.HasOne(x => x.Prenda).WithMany(x => x.InsumoPrendas).HasForeignKey(x => x.IdPrendaFk);
         }

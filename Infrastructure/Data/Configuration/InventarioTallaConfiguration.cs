@@ -14,8 +14,7 @@ namespace Infrastructure.Data.Configuration
         public void Configure(EntityTypeBuilder<InventarioTalla> builder)
         {
             builder.ToTable("InventarioTalla");
-            builder.HasKey(t => new { t.Id, t.IdInventarioFk });
-            builder.HasKey(t => new { t.Id, t.IdTallaFk });
+            builder.HasKey(t => new { t.IdTallaFk, t.IdInventarioFk });
             builder.HasOne(x => x.Inventario).WithMany(x => x.InventarioTallas).HasForeignKey(x => x.IdInventarioFk);
             builder.HasOne(x => x.Talla).WithMany(x => x.InventarioTallas).HasForeignKey(x => x.IdTallaFk);
         }
