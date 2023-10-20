@@ -9,8 +9,9 @@ namespace API.Dtos
     {
         public int Id { get; set; }
         public int IdEmp { get; set; }
+        public string Nombre { get; set; }
         public int IdCargoFk { get; set; }
-        public DateTime FechaIngreso { get; set; }
+        public DateOnly FechaIngreso { get; set; }
         public int IdMunicipioFk { get; set; }
         
     }
